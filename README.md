@@ -1,32 +1,72 @@
-# React + TypeScript + Vite
+# Granty
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Discover scholarships. Stay on top of applications.**
 
-Currently, two official plugins are available:
+Granty is a responsive scholarship discovery and application tracking prototype for students in India. It helps students explore Central and State Government scholarship opportunities, find listings that may fit their profile, and organize application progress and deadlines.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> **Prototype notice:** Scholarship listings and dates shown in the demo are sample data. Verify current eligibility, deadlines, and application instructions on the provider’s official website.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Profile-based discovery:** Uses a student’s state, education level, and field of study to find potential scholarship matches.
+- **Scholarship search and filters:** Browse Central and State Government listings. Filter by state, education level, field, eligibility, award amount, or application status.
+- **Scholarship details:** Review benefits, eligibility, required documents, application steps, deadlines, and provider links.
+- **Saved scholarships:** Bookmark opportunities to revisit later.
+- **Application tracker:** Manually track progress, from preparing documents to receiving a decision.
+- **Deadline notifications:** View in-app reminders for saved scholarships and approaching deadlines.
+- **Responsive design:** Use Granty on desktop, tablet, or mobile.
 
-## Expanding the Oxlint configuration
+## How it works
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+1. Create an account and enter a few profile details.
+2. Browse scholarships that may fit your profile.
+3. Use filters to narrow the results.
+4. Open a scholarship to review its details and follow the provider’s application link.
+5. Save scholarships and update application progress in Granty.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+Granty suggests potential matches; the scholarship provider makes the final eligibility decision. Application IDs are personal references only. The prototype does not retrieve live application status from government portals.
+
+## Technology
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui-style components
+- React Router
+- Framer Motion
+- Recharts
+- Lucide React
+
+## Run locally
+
+You’ll need Node.js and npm installed.
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Vite will show the local development URL in the terminal.
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Prototype limitations
+
+- Scholarship records are for demonstration and are not verified current opportunities.
+- Authentication and student data use prototype storage and are not suitable for real accounts or sensitive information.
+- Notifications appear inside the app; email and push delivery are not configured.
+- Application progress is updated manually; live provider status integrations are not configured.
+- Confirm scholarship details and submit applications through the provider’s official website.
+
+## Deployment
+
+Build the project with `npm run build`, then deploy the generated `dist` folder to a static hosting provider that supports single-page applications.
+
+## License
+
+No license has been specified yet.
